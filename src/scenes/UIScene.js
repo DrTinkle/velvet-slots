@@ -10,12 +10,15 @@ export class UIScene extends Phaser.Scene {
   }
 
   create() {
-    this.balance = 1000;
+    this.balance = 100;
     this.bet = BET.DEFAULT;
     this.betStepIdx = BET.STEPS.indexOf(BET.DEFAULT);
     this.spinning = false;
 
     this._build();
+
+    // Sync initial bet to GameScene
+    this.game.events.emit('betChanged', this.bet);
 
     this.game.events.on('spinStart', () => {
       this.spinning = true;
