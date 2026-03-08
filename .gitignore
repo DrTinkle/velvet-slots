@@ -1,0 +1,15 @@
+# Node
+node_modules/
+npm-debug.log*
+
+# Simulator (not needed in deployment)
+simulator.mjs
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+*.swp
